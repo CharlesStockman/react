@@ -35,34 +35,61 @@
  		]
 	}
 
+	class Photo extends React.Component {
+	    render() {
+	        return(
+	            <div className="photo">
+                    <img src="images/LinkedInChuck.jpg" alt="Photo" />
+                </div>
+	        )
+	    }
+	}
+
+	class Bio extends React.Component {
+	    render() {
+	        return (
+	           <div className="bio">
+                   <h1 className="name">Chris.name</h1>
+                   <h2 className="location">Brooklyn, New York</h2>
+                   <div className="occupation">
+                     <p>Protecting Freedom @ onemonthedu</p>
+                   </div>
+               </div>
+
+	        )
+	    }
+	}
+
+	class Updates extends React.Component {
+	    render() {
+	        return (
+	           <div className="updates">
+                   <ul>
+                     <li className="update">Updates</li>
+                     <li className="update">Updates</li>
+                   </ul>
+                </div>
+	        )
+	    }
+	}
+
 	class Card extends React.Component {
 
 	    render() {
 	        return (
                 <div className="card">
-                        <div className="photo">
-                            <img src="images/LinkedInChuck.jpg" alt="Photo" />
-                        </div>
-                        <div className="bio">
-                            <h1 className="name">Chris.name</h1>
-                            <h2 className="location">Brooklyn, New York</h2>
-                            <div className="occupation">
-                                <p>Protecting Freedom @ onemonthedu</p>
-                            </div>
-                        </div>
-                        <div className=updates>
-                            <ul>
-                                <li className="update">Updates</li>
-                                <li className="update">Updates</li>
-                            </ul>
-                        </div>
-                </div>,
-            }
-        )
+                    <Photo/>
+                    <Bio/>
+                    <Updates/>
+                </div>
+            )
+        }
 	}
 
 	ReactDOM.render(
-        	<card>,
+        <Card>
+          <Photo/>
+        </Card>,
 		document.getElementById('app')
 	);
  </script>
@@ -152,7 +179,7 @@
 <body>
 
  <div id="app">
-     
+     <!--
     <div class="card">
      <div class="photo">
        <img src="images/LinkedInChuck.jpg" alt="Photo">
@@ -170,7 +197,8 @@
           <li class="update">Updates</li>
         </ul>
      </div>
-    </div> 
+    </div>
+    -->
 
  </div>
 
