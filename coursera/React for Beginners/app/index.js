@@ -30,7 +30,7 @@
 	    render() {
 	        return(
 	            <div className="photo">
-                    <img src="images/LinkedInChuck.jpg" alt="Photo" />
+                    <img src={this.props.yourImage} alt="Photo" />
                 </div>
 	        )
 	    }
@@ -40,10 +40,10 @@
 	    render() {
 	        return (
 	           <div className="bio">
-                   <h1 className="name">Chris.name</h1>
-                   <h2 className="location">Brooklyn, New York</h2>
+                   <h1 className="name">{this.props.name}</h1>
+                   <h2 className="location">{this.props.location}</h2>
                    <div className="occupation">
-                     <p>Protecting Freedom @ onemonthedu</p>
+                     <p>{this.props.occupation}</p>
                    </div>
                </div>
 
@@ -69,8 +69,8 @@
 	    render() {
 	        return (
                 <div className="card">
-                    <Photo/>
-                    <Bio/>
+                    <Photo yourImage={"images/LinkedInChuck.jpg"} />
+                    <Bio name="Charles  Stockman" location="Centreville, va" occupation="Software Engineer"/>
                     <Updates/>
                 </div>
             )
