@@ -1,11 +1,11 @@
 	var person = {
- 		name: 'Chris Castig',
- 		location: 'Brooklyn, New York',
+ 		name: 'Charles Stockman',
+ 		location: 'Centreville, Virginia',
  		occupation: {
-   			title: 'Protecting Freedom',
-  			employer: '@onemonthedu'
+   			title: 'Software Engineer',
+  			employer: '@techsursolutions.com'
  		},
- 		photo: './images/chris-merica.png',
+ 		photo: 'images/LinkedInChuck.jpg',
  		updates: [
    			{
      				platform: 'twitter',
@@ -43,7 +43,7 @@
                    <h1 className="name">{this.props.name}</h1>
                    <h2 className="location">{this.props.location}</h2>
                    <div className="occupation">
-                     <p>{this.props.occupation}</p>
+                     <p>{this.props.occupation} {this.props.company}</p>
                    </div>
                </div>
 
@@ -69,8 +69,8 @@
 	    render() {
 	        return (
                 <div className="card">
-                    <Photo yourImage={"images/LinkedInChuck.jpg"} />
-                    <Bio name="Charles  Stockman" location="Centreville, va" occupation="Software Engineer"/>
+                    <Photo yourImage={person.photo} />
+                    <Bio name={person.name} location={person.location} occupation={person.occupation.title} company={person.occupation.employer}/>
                     <Updates/>
                 </div>
             )
